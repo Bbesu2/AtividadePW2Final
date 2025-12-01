@@ -1,0 +1,18 @@
+.topo{
+    width: 100%;
+    background-color: aqua;
+}
+
+.meio{
+display: flex;
+justify-content: center;
+align-items: top;
+height: 100vh; 
+
+}
+
+#carouselExampleFade img {
+  height: 60vb;
+  width: 100%;       /* altura fixa */
+  object-fit: cover;   /* mantém proporção cortando excesso */
+}
