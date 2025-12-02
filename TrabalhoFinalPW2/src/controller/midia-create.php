@@ -23,37 +23,5 @@ switch (@$_REQUEST['acao']) {
         header("Location: ../view/index.php");
         exit;
 
-    case 'editar':
-    $sql = "UPDATE tbmidia SET
-                nome = :nome,
-                genero = :genero,
-                sinopse = :sinopse,
-                clasInd = :clasInd,
-                anoLanc = :anoLanc,
-                tipo = :tipo,
-                episodio = :episodio
-            WHERE codigo = :codigo";
 
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([
-        ':nome'     => $_POST["nome"],
-        ':genero'   => $_POST["genero"],
-        ':sinopse'  => $_POST["sinopse"],
-        ':clasInd'  => $_POST["clasInd"],
-        ':anoLanc'  => $_POST["anoLanc"],
-        ':tipo'     => $_POST["tipo"],
-        ':episodio' => $_POST["episodio"],
-        ':codigo'   => $_POST["codigo"]
-    ]);
-
-    header("Location: ../view/index.php");
-    exit;
-
-    case 'deletar':
-        $sql = "DELETE FROM tbmidia WHERE codigo = :codigo";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([ ':codigo' => $_REQUEST["codigo"] ]);
-
-        header("Location: ../view/index.php");
-        exit;
 }

@@ -1,7 +1,11 @@
 <?php
 require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/../model/FilmeModel.php';
-require_once __DIR__ . '/../model/SerieModel.php';?>
+require_once __DIR__ . '/../model/SerieModel.php';
+require_once __DIR__ . '/../controller/midia-delete.php';
+require_once __DIR__ . '/../controller/midia-update.php';
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -14,7 +18,7 @@ require_once __DIR__ . '/../model/SerieModel.php';?>
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="estilos/carossel.css">
 
     <meta charset="UTF-8">
@@ -28,15 +32,14 @@ require_once __DIR__ . '/../model/SerieModel.php';?>
         <div class="topo">
        <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img src="imagens\icon\WATCH.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Watch.com</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-        <a class="nav-link" href="TelaAdicionarMidia.php">Adicionar</a>
-        <a class="nav-link" href="TelaCrud.php">Editar</a>
+        <a class="nav-link" href="telaformulariofilme.php">Adicionar</a>
+        
       </div>
     </div>
   </div>

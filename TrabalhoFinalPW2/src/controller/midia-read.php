@@ -36,11 +36,10 @@ if ($qtd > 0) {
         echo "<td>" . $row->anoLanc  . "</td>";
         echo "<td>" . $row->tipo     . "</td>";
         echo "<td>" . $row->episodio . "</td>";
-
         // Botões de ação
 echo "<td>
         <a href='telacrud.php?codigo=" . $row->codigo . "' class='btn btn-success'>Editar</a>
-        <a href='../controller/midia-create.php?acao=deletar&codigo=" . $row->codigo . "' class='btn btn-danger' onclick=\"return confirm('Tem certeza que deseja excluir?');\">Excluir</a>
+        <a href='../controller/midia-delete.php?acao=deletar&codigo=" . $row->codigo . "' class='btn btn-danger' onclick=\"return confirm('Tem certeza que deseja excluir?');\">Excluir</a>
       </td>";
 echo "</tr>";
 

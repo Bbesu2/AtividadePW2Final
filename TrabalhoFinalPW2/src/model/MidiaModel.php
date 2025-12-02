@@ -17,10 +17,10 @@ enum Genero: string{
 class MidiaModel {
     public $codigo;
     public $tipo;
-    public string $nome;
+    public $nome;
     public Genero $genero;
-    public int $anoLanc;
-    public string $sinopse;
+    public $anoLanc;
+    public $sinopse;
     public $clasInd;
 
 
@@ -29,7 +29,7 @@ class MidiaModel {
         $nome, $genero, $anoLanc, $sinopse, $clasInd, $tipo,) 
         {
         $this->nome     = $nome;
-        $this->genero   = $genero;
+        $this->genero   = Genero::from($genero);
         $this->anoLanc  = $anoLanc;
         $this->sinopse  = $sinopse;
         $this->clasInd  = $clasInd;
